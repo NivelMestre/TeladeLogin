@@ -1,0 +1,233 @@
+body {
+    background-image: url("./imagens/imagemfundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+}
+
+#paralogin, #paracadastro {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+#paracadastro:target ~ #telacadastro,
+#paralogin:target ~ #telalogin {
+    z-index: 2;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+#paracadastro:target ~ #telalogin,
+#paralogin:target ~ #telacadastro {
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /*fadeOutLeft*/
+  @-webkit-keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(-20px);
+    }
+  }
+  
+  @keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+
+/*TELA DE LOGIN*/
+
+#telalogin {
+    width: 430px;
+    height: 510px;
+    background-color: rgb(24, 24, 24);
+    position: absolute;
+    
+    text-align: center;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.h3 {
+    margin: 0;
+
+    display: flex;
+    margin-left: 65px;
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+#inputemail {
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 17px;
+    padding-left: 8px;
+    margin-bottom: 30px;
+}
+
+#inputsenha {
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 17px;
+    padding-left: 8px;
+    margin-bottom: 50px;
+}
+
+#botaologin {
+    width: 313px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+
+    transition: background 400ms;
+}
+
+#botaologin:hover{
+    transition-duration: 400ms;
+    background-color: rgb(192, 192, 192);
+}
+
+#linkcadastro {
+    color: white;
+    display: flex;
+    justify-content: right;
+    margin-right: 60px;
+    margin-top: 30px;
+}
+
+/*TELA DE CADASTRO*/
+
+#telacadastro {
+    width: 430px;
+    height: 510px;
+    background-color: rgb(24, 24, 24);
+    position: absolute;
+    
+    text-align: center;
+    border-radius: 15px;
+}
+
+#h1cad {
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 42px;
+    color: white;
+}
+
+.h3cad {
+    margin: 0;
+
+    display: flex;
+    margin-left: 65px;
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+#inputemailcad {
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 17px;
+    padding-left: 8px;
+    margin-bottom: 30px;
+}
+
+#inputsenhacad {
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 17px;
+    padding-left: 8px;
+    margin-bottom: 50px;
+}
+
+#botaocadastro {
+    width: 313px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+
+    transition: background 400ms;
+}
+
+#botaocadastro:hover {
+    transition-duration: 400ms;
+    background-color: rgb(192, 192, 192);
+}
+
+#linklogin {
+    color: white;
+    display: flex;
+    justify-content: right;
+    margin-right: 60px;
+    margin-top: 30px;
+}
